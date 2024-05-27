@@ -7,7 +7,7 @@
     --dark-blue: hsl(212, 21%, 14%);
     --grayish-blue: hsl(228, 12%, 48%);
     --white: hsl(0, 0%, 100%);
-    --font-size: 10px;
+    --font-size: 11px;
     --font-title-size: 24px;
     --font-montserrat: "Montserrat";
     --font-fraunces: "Fraunces";
@@ -39,9 +39,15 @@ h1 {
     font-family: var(--font-fraunces);
     font-size: var(--font-title-size);
     color: var(--dark-blue);
-    line-height: 0.9;
+    line-height: 1.5rem;
     padding-top: 1rem;
     padding-bottom: 1rem;
+}
+
+button {
+    display: flex;
+    flex-direction: row;
+    height: 40px;
 }
 
 .container {
@@ -71,19 +77,23 @@ h1 {
     width: 50%;
 }
 
-.subheader {
-    text-transform: uppercase;
-    font-family: var(--font-fallback);
-}
-
 .price-container {
     flex-direction: row;
 }
 
 .subheader {
+    text-transform: uppercase;
     color: var(--grayish-blue);
     font-family: var(--font-montserrat);
     font-size: var(--font-size);
     font-weight: var(--regular-weight);
     letter-spacing: 0.5em;
+}
+
+.description {
+    color: var(--grayish-blue);
+    font-family: var(--font-montserrat);
+    font-size: var(--font-size);
+    padding-bottom: 1rem;
+    line-height: 1.2rem;
 }
