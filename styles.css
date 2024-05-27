@@ -30,11 +30,6 @@ body {
     align-items: center;
 }
 
-img {
-    height: auto;
-    width: 100%;
-}
-
 h1 {
     font-family: var(--font-fraunces);
     font-size: var(--font-title-size);
@@ -45,9 +40,17 @@ h1 {
 }
 
 button {
-    display: flex;
-    flex-direction: row;
-    height: 40px;
+    background-color: var(--primary-dark-cyan); /* Green background */
+    border: none; /* Remove borders */
+    color: white; /* White text */
+    padding: 12px 35px; /* Some padding */
+    text-align: center; /* Centered text */
+    text-decoration: none; /* Remove underline */
+    display: flex; /* Make the button inline-block */
+    font-size: var(--font-size); /* Increase font size */
+    margin: 2px 2px; /* Some margin */
+    cursor: pointer; /* Pointer/hand icon */
+    border-radius: 8px; /* Rounded corners */
 }
 
 .container {
@@ -68,6 +71,11 @@ button {
     display: flex;
     justify-content: center;
     align-items: center;
+}
+
+.hero {
+    height: auto;
+    width: 100%;
 }
 
 .desc-container {
@@ -96,4 +104,14 @@ button {
     font-size: var(--font-size);
     padding-bottom: 1rem;
     line-height: 1.2rem;
+}
+
+.icon {
+    height: auto;
+    width: 10%;
+}
+
+.button-text {
+    font-family: var(--font-montserrat);
+    font-weight: 700;
 }
