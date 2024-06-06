@@ -3,6 +3,7 @@
 
 :root {
     --primary-dark-cyan: hsl(158, 36%, 37%);
+    --primary-darker-cyan: hsl(158, 36%, 20%);
     --primary-cream: hsl(30, 38%, 92%);
     --dark-blue: hsl(212, 21%, 14%);
     --grayish-blue: hsl(228, 12%, 48%);
@@ -44,13 +45,19 @@ button {
     border: none; /* Remove borders */
     color: white; /* White text */
     padding: 12px 35px; /* Some padding */
-    text-align: center; /* Centered text */
+    align-items: center;
     text-decoration: none; /* Remove underline */
-    display: flex; /* Make the button inline-block */
+    display: flex;
+    flex-direction: row;
     font-size: var(--font-size); /* Increase font size */
     margin: 2px 2px; /* Some margin */
     cursor: pointer; /* Pointer/hand icon */
     border-radius: 8px; /* Rounded corners */
+}
+
+button:active {
+    background-color: var(--primary-darker-cyan);
+    transform: translateY(2px) translateX(2px);
 }
 
 .container {
@@ -127,7 +134,8 @@ button {
 
 .icon {
     height: auto;
-    width: 10%;
+    width: 12%;
+    margin-right: 15px;
 }
 
 .button-text {
