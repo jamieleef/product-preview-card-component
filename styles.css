@@ -41,18 +41,18 @@ h1 {
 }
 
 button {
-    background-color: var(--primary-dark-cyan); /* Green background */
-    border: none; /* Remove borders */
-    color: white; /* White text */
-    padding: 12px 35px; /* Some padding */
+    background-color: var(--primary-dark-cyan);
+    border: none;
+    color: white;
+    padding: 12px 35px;
     align-items: center;
-    text-decoration: none; /* Remove underline */
+    text-decoration: none;
     display: flex;
     flex-direction: row;
-    font-size: var(--font-size); /* Increase font size */
-    margin: 2px 2px; /* Some margin */
-    cursor: pointer; /* Pointer/hand icon */
-    border-radius: 8px; /* Rounded corners */
+    font-size: var(--font-size);
+    margin: 2px 2px;
+    cursor: pointer;
+    border-radius: 8px;
 }
 
 button:active {
@@ -60,17 +60,14 @@ button:active {
     transform: translateY(2px) translateX(2px);
 }
 
-.container {
-    display: flex;
-}
-
 .card-container {
-    max-width: 450px;
-    max-height: 340px;
+    width: 450px;
+    height: 340px;
     border-radius: 0.5rem;
     overflow: hidden;
     position: relative;
     flex-direction: row;
+    display: flex;
 }
 
 .image-container {
@@ -86,6 +83,7 @@ button:active {
 }
 
 .desc-container {
+    display: flex;
     flex-direction: column;
     background-color: var(--white);
     padding: 1.5rem;
@@ -141,4 +139,45 @@ button:active {
 .button-text {
     font-family: var(--font-montserrat);
     font-weight: 700;
+}
+
+@media screen and (max-width: 480px) {
+    button {
+        justify-content: center;
+    }
+
+    h1 {
+        font-size: 30px;
+    }
+
+    .card-container {
+        flex-direction: column;
+        width: 90%;
+        height: 80%;
+    }
+
+    .image-container {
+        width: 100%;
+        height: calc(1.25 * (100% / 3));
+        flex: 1;
+    }
+
+    .desc-container {
+        width: 100%;
+        height: calc(1.75 * (100% / 3));
+        flex: 2;
+    }
+
+    .price-container {
+        justify-content: left;
+    }
+
+    .new-price {
+        flex: 1;
+    }
+
+    .old-price {
+        flex: 2;
+        padding-left: 15px;
+    }
 }
